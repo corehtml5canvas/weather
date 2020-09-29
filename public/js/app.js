@@ -6,7 +6,8 @@ form.onsubmit = e => {
   e.preventDefault()
   searchResult.textContent = 'Loading...'
   
-  fetch(`http://localhost:9000/weather?address=${search.value}`)
+  const 
+  fetch(`/weather?address=${search.value}`)
     .then(response => response.json())
     .then(data => {
       if (data.error) {
